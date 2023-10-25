@@ -24,12 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+y=e_6=#is%gwq6v*gw#y!+#u1*rnj5x&tsovi-iuqz448$10z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
-# ALLOWED_HOSTS = [
-#     'sparlex-tip-top.site'
-# ]
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'sparlex-tip-top.site'
+]
+
+# ALLOWED_HOSTS = []
 
 # Application definition
 
