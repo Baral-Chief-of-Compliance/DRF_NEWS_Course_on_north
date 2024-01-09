@@ -5,7 +5,10 @@ django-ckeditor==6.7.0
 django-cors-headers==4.3.0
 django-js-asset==2.1.0
 djangorestframework==3.14.0
+gunicorn==21.2.0
+packaging==23.2
 Pillow==10.1.0
+python-dotenv==1.0.0
 pytz==2023.3.post1
 soupsieve==2.5
 sqlparse==0.4.4

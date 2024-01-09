@@ -4,6 +4,8 @@ from news.models import News
 from news.serializers import NewsSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from admin_panel.settings import BASE_DIR
+from bs4 import BeautifulSoup
 
 
 # class NewsApiView(generics.ListAPIView):
@@ -76,6 +78,14 @@ class NewsDetail(APIView):
                 news_detail = n
                 break
 
+        hmtl_textNews = BeautifulSoup(news_detail["textNews"])
+
+        for img in hmtl_textNews.find_all('img'):
+            img['src'] = 'http://127.0.0.1:8000' + img['src']
+
+        news_detail['textNews'] = str(hmtl_textNews)
+        
+        print(hmtl_textNews)
         return Response({
             "news_detail": news_detail
         })
